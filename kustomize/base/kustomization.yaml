@@ -14,3 +14,5 @@ configMapGenerator:
   - username=admin
   - url="https://172.31.186.4"
   name: tf-inputs
+configurations:
+- ../kustomizeconfig/workspace.yaml
