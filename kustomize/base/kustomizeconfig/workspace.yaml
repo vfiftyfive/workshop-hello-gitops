@@ -4,4 +4,3 @@ nameReference:
   fieldSpecs:
   - path: spec/variables/ValueFrom/configMapKeyRef/name
     kind: Workspace
-    create: true

@@ -7,12 +7,10 @@ resources:
 namespace: hello-gitops
 images:
 - name: hello-gitops
-  newName: emmsys/hello-gitops
-  newTag: bd0b95a1e7e31fd3a30c0a979ffbfc45761b001f
+  newName: vfiftyfive/hello-gitops
+  newTag: d73af99a18e862273ec9049e2a87fbfc61653463
 configMapGenerator:
-- name: tf-inputs
-  literals:
+- literals:
   - username=admin
   - url="https://172.31.186.4"
-configurations:
-- ./kustomizeconfig/workspace.yaml
+  name: tf-inputs
