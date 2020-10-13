@@ -3,9 +3,16 @@ kind: Kustomization
 resources:
 - deployment.yaml
 - service.yaml
-- ingress.yaml
+- workspace.yaml
 namespace: hello-gitops
 images:
 - name: hello-gitops
   newName: emmsys/hello-gitops
   newTag: bd0b95a1e7e31fd3a30c0a979ffbfc45761b001f
+configMapGenerator:
+- name: tf-inputs
+  literals:
+  - username=admin
+  - url="https://172.31.186.4"
+configurations:
+- ./kustomizeconfig/workspace.yaml

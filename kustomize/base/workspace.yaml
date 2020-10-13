@@ -1,0 +1,35 @@
+apiVersion: app.terraform.io/v1alpha1
+kind: Workspace
+metadata:
+  name: aci-operator-demo
+spec:
+  organization: cisco-dcn-ecosystem
+  secretsMountPath: "/tmp/secrets"
+  agentPoolID: apool-2kAjMzX4u7amggTC
+  module:
+    source: "git::https://github.com/vfiftyfive/terraform-aci-gitops-demo.git"
+  outputs:
+    - key: epg
+      moduleOutputName: epg
+  variables:
+    - key: username
+      ValueFrom:
+        configMapKeyRef:
+          name: tf-inputs
+          key: username
+      sensitive: false
+      environmentVariable: false
+    - key: url
+      ValueFrom:
+        configMapKeyRef:
+          name: tf-inputs
+          key: url
+      sensitive: false
+      environmentVariable: false
+    - key: password
+      sensitive: true
+      environmentVariable: false
+    - key: epg_name
+      value: hello-gitops
+      sensitive: false
+      environmentVariable: false
