@@ -8,4 +8,4 @@ resources:
 images:
 - name: hello-gitops
   newName: vfiftyfive/hello-gitops
-  newTag: 87519c9db083ece25be5603298f3a4083885122b
+  newTag: 76e197a6d069bbd342e4ddec0e31563522681757
