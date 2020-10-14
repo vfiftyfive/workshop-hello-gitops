@@ -5,15 +5,7 @@ resources:
 - service.yaml
 - workspace.yaml
 - namespace.yaml
-namespace: hello-gitops
 images:
 - name: hello-gitops
   newName: vfiftyfive/hello-gitops
   newTag: 87519c9db083ece25be5603298f3a4083885122b
-configMapGenerator:
-- literals:
-  - username=admin
-  - url="https://172.31.186.4"
-  name: tf-inputs
-configurations:
-- ./kustomizeconfig/workspace.yaml
