@@ -2,6 +2,4 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: hello-gitops
-  annotations: 
-    opflex.cisco.com/endpoint-group: '{ "tenant":"SJKube01","app-profile":"aci-containers-SJKube01","name":"hello-gitops" }' 
 
