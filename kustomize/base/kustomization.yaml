@@ -4,6 +4,7 @@ resources:
 - deployment.yaml
 - service.yaml
 - namespace.yaml
+- networkpolicy.yaml
 images:
 - name: hello-gitops
   newName: vfiftyfive/hello-gitops
